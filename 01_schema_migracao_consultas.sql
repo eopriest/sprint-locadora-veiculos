@@ -1,3 +1,4 @@
+revisado e ajustado por Davi
 -- Sprint Ágil de Refatoração de Banco de Dados
 -- Tema 7: Locadora de Veículos  |  Compatível com SQLite
 PRAGMA foreign_keys = ON;
