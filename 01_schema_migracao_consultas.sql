@@ -1,3 +1,4 @@
+revisado e ajustado por Davi
 -- Sprint Ágil de Refatoração de Banco de Dados
 -- Tema 7: Locadora de Veículos  |  Compatível com SQLite
 PRAGMA foreign_keys = ON;
@@ -105,6 +106,8 @@ CREATE INDEX idx_locacoes_veiculo_status ON Locacoes(id_veiculo, status);
 CREATE INDEX idx_locacoes_datas ON Locacoes(data_retirada, data_prevista_devolucao);
 CREATE INDEX idx_locacoes_cliente ON Locacoes(id_cliente);
 CREATE INDEX idx_manutencoes_veiculo_data ON Manutencoes(id_veiculo, data_manutencao);
+CREATE INDEX idx_manutencoes_veiculo_status
+ON Manutencoes(id_veiculo, status);
 CREATE INDEX idx_multas_locacao ON Multas(id_locacao);
 -- Regra de negócio: no máximo 1 locação aberta por veículo.
 CREATE UNIQUE INDEX ux_locacao_aberta ON Locacoes(id_veiculo) WHERE status = 'Aberta';
